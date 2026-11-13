@@ -20,6 +20,13 @@
 // })
 // console.log(newnum) //[ 6, 7, 8, 9, 10 ]
 
-const num=[1,2,3,4,5]
-const newnum=num.map((item)=> item+2)
-console.log(newnum)//[ 3, 4, 5, 6, 7 ]
+// const num=[1,2,3,4,5]
+// const newnum=num.map((item)=> item+2)
+// console.log(newnum)//[ 3, 4, 5, 6, 7 ]
+let address;
+console.log(typeof "abc")
+
+// let a=[1,2,3,4,5]
+// a.unshift(44,3)
+// console.log(a)
+
