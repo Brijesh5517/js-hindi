@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Brijesh</h1>
+    <button id="Stop">Stop</button>
+</body>
+<Script>
+    setTimeout(function(){
+        console.log("Brijesh")
+    },2000)
+
+    const changeText=function( newstr){
+    document.querySelector("h1").innerHTML=`Updated text from event ${newstr}`}
+
+    const timeid= setTimeout(changeText,2000,"Brijesh from parameter");
+
+    document.querySelector("#Stop").addEventListener('click',function(){
+        clearTimeout(timeid);
+        console.log(timeid)
+    })
+
+</Script>
+</html>
