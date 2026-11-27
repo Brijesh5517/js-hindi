@@ -49,25 +49,36 @@
 //     console.log(output)
 // })
 
-const promiseFive=new Promise(function(resolve, reject){
-    setTimeout(()=>{
-        let error=true;
-        if(!error){
-            resolve({status:"success",name:"Brijesh"});
-        }
-        else{
-            reject({status:"Failed", reason:"Something went wrong"})
-        }
-    },1000)
-});
+// const promiseFive=new Promise(function(resolve, reject){
+//     setTimeout(()=>{
+//         let error=true;
+//         if(!error){
+//             resolve({status:"success",name:"Brijesh"});
+//         }
+//         else{
+//             reject({status:"Failed", reason:"Something went wrong"})
+//         }
+//     },1000)
+// });
 
-async function resolvePromiseFive() {
-    try {
-        const outpout= await promiseFive;
-    console.log(outpout)
+// async function resolvePromiseFive() {
+//     try {
+//         const outpout= await promiseFive;
+//     console.log(outpout)
         
-    } catch (error) {
-        console.log(error)
-    }
-}
-resolvePromiseFive()
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+// resolvePromiseFive()
+
+fetch("https://jsonplaceholder.typicode.com/users/1")
+    .then((response) => {
+         response.json();
+    })
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.error(error);
+    });
